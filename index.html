@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gamepad Latency Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Gamepad Latency Comparison Test</h1>
+  <p>Connect a gamepad and press buttons repeatedly to compare event vs polling latency.</p>
+  <h2>Live Polling Snapshot</h2>
+  <pre id="output"></pre>
+
+  <h2>Raw Event Payload</h2>
+  <pre id="rawEventOutput"></pre>
+
+  <h2>Latency Comparison Results</h2>
+  <pre id="comparisonOutput"></pre>
+
+  <script src="latency.js"></script>
+</body>
+</html>

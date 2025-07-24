@@ -62,33 +62,6 @@ function logComparison(type, index) {
   }
 }
 
-//For stats
-// function logComparison(type, index) {
-//   const pollTime = pollTimestamps[type][index];
-//   const eventTime = eventTimestamps[type][index];
-//   if (pollTime && eventTime) {
-//     const delta = pollTime - eventTime; // Positive = event is faster
-
-//     latencyStats[type].push(delta);
-
-//     const mean = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
-//     const stddev = (arr) => {
-//       const m = mean(arr);
-//       return Math.sqrt(arr.reduce((a, b) => a + Math.pow(b - m, 2), 0) / arr.length);
-//     };
-
-//     const output = document.getElementById("comparisonOutput");
-//     if (output) {
-//       output.textContent +=
-//         `${type.toUpperCase()}[${index}] latency Δ: ${delta.toFixed(2)}ms\n` +
-//         `→ avg: ${mean(latencyStats[type]).toFixed(2)}ms, stddev: ${stddev(latencyStats[type]).toFixed(2)}ms\n\n`;
-//     }
-
-//     delete pollTimestamps[type][index];
-//     delete eventTimestamps[type][index];
-//   }
-// }
-
 window.addEventListener("gamepadconnected", (event) => {
   if (containsAnyPhraseCI(event.gamepad.id, ["Xbox", "Wireless"])) {
     gamepadIndex = event.gamepad.index;

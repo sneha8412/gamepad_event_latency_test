@@ -29,6 +29,7 @@ let eventTimestamps = {
   touches: {}
 };
 
+// For future optimizations if needed.
 const missedComparisons = {
   buttons: 0,
   axes: 0,
